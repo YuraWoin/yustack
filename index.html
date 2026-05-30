@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="YuStack — розробка Telegram-ботів з базами даних, FSM-логікою та автоматизацією. Від ідеї до деплою.">
+  <title>YuStack — Telegram-боти та веб-розробка</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ════════════════════ НАВІГАЦІЯ ════════════════════ -->
+<nav>
+  <a class="nav-logo" href="#">Yu<span>Stack</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Послуги</a></li>
+    <li><a href="#stack">Стек</a></li>
+    <li><a href="#how">Процес</a></li>
+    <li><a href="#contact">Контакт</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Замовити проєкт</a>
+</nav>
+
+<!-- ════════════════════ HERO ════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-label">yustack.dev — система онлайн<span class="blink"></span></div>
+    <h1>
+      <span class="dim">Бот. База.</span><br>
+      <span class="green">Результат.</span>
+    </h1>
+    <p class="hero-sub">
+      Розробляємо <strong>Telegram-ботів</strong> з базами даних, FSM-логікою
+      та повноцінною автоматизацією бізнес-процесів. Від технічного завдання
+      до робочого деплою — беремо на себе весь цикл.
+    </p>
+    <div class="hero-actions">
+      <a href="#services" class="btn-primary">Що ми робимо</a>
+      <a href="#contact" class="btn-secondary">Написати нам</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ СТАТИСТИКА ════════════════════ -->
+<div class="stats-bar">
+  <div class="stat reveal">
+    <span class="stat-num">100%</span>
+    <div class="stat-label">Задоволених клієнтів</div>
+  </div>
+  <div class="stat reveal">
+    <span class="stat-num">&lt;48h</span>
+    <div class="stat-label">Перший прототип</div>
+  </div>
+  <div class="stat reveal">
+    <span class="stat-num">24/7</span>
+    <div class="stat-label">Боти у продакшені</div>
+  </div>
+  <div class="stat reveal">
+    <span class="stat-num">0</span>
+    <div class="stat-label">Незапланованих збоїв</div>
+  </div>
+</div>
+
+<!-- ════════════════════ ПОСЛУГИ ════════════════════ -->
+<section id="services">
+  <div class="section-tag reveal">services</div>
+  <h2 class="reveal">Що ми робимо</h2>
+  <p class="section-desc reveal">
+    Від простого бота для запису клієнтів до повноцінного веб-застосунку
+    з адмін-панеллю та аналітикою. Пишемо чистий код, деплоємо швидко,
+    підтримуємо після здачі.
+  </p>
+
+  <div class="services-grid">
+
+    <div class="service-card reveal">
+      <span class="service-num">01</span>
+      <span class="service-icon">🤖</span>
+      <h3>Telegram-боти</h3>
+      <p>
+        Розробляємо ботів будь-якої складності — від системи онлайн-запису
+        клієнтів до повноцінних CRM та платіжних шлюзів прямо у чаті.
+        Побудовані на aiogram із чіткою FSM-логікою та зручними inline-клавіатурами.
+      </p>
+      <div class="service-tags">
+        <span class="tag">aiogram</span>
+        <span class="tag">FSM</span>
+        <span class="tag">payments</span>
+        <span class="tag">CRM</span>
+      </div>
+    </div>
+
+    <div class="service-card accent reveal">
+      <span class="service-num">02</span>
+      <span class="service-icon">🗄️</span>
+      <h3>Бази даних</h3>
+      <p>
+        Проєктуємо схему під конкретну задачу: PostgreSQL, MySQL або SQLite
+        залежно від масштабу проєкту. Пишемо міграції, налаштовуємо ORM
+        через SQLAlchemy та оптимізуємо запити під навантаження.
+      </p>
+      <div class="service-tags">
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">SQLAlchemy</span>
+        <span class="tag">Alembic</span>
+      </div>
+    </div>
+
+    <div class="service-card accent2 reveal">
+      <span class="service-num">03</span>
+      <span class="service-icon">🌐</span>
+      <h3>Веб-сайти</h3>
+      <p>
+        Створюємо лендінги, корпоративні сайти та портфоліо з сучасним
+        дизайном та адаптивною версткою. Усі сайти оптимізовані для SEO
+        та коректно відображаються на будь-якому пристрої.
+      </p>
+      <div class="service-tags">
+        <span class="tag">HTML/CSS</span>
+        <span class="tag">React</span>
+        <span class="tag">SEO</span>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <span class="service-num">04</span>
+      <span class="service-icon">⚙️</span>
+      <h3>Автоматизація</h3>
+      <p>
+        Пишемо скрипти, парсери та інтеграції зі сторонніми API.
+        Використовуємо asyncio для максимальної швидкодії.
+        Автоматизуємо все, що займає ваш час і може виконуватись без участі людини.
+      </p>
+      <div class="service-tags">
+        <span class="tag">asyncio</span>
+        <span class="tag">parsing</span>
+        <span class="tag">REST API</span>
+      </div>
+    </div>
+
+    <div class="service-card accent reveal">
+      <span class="service-num">05</span>
+      <span class="service-icon">🚀</span>
+      <h3>Деплой та DevOps</h3>
+      <p>
+        Пакуємо застосунки у Docker-контейнери та розгортаємо на Railway
+        або власному VPS. Налаштовуємо CI/CD-пайплайни так, щоб оновлення
+        відбувались автоматично — без вашої участі та без простоїв.
+      </p>
+      <div class="service-tags">
+        <span class="tag">Docker</span>
+        <span class="tag">Railway</span>
+        <span class="tag">CI/CD</span>
+      </div>
+    </div>
+
+    <div class="service-card accent2 reveal">
+      <span class="service-num">06</span>
+      <span class="service-icon">🧠</span>
+      <h3>AI-інтеграції</h3>
+      <p>
+        Вбудовуємо ChatGPT або RAG-систему безпосередньо у вашого бота.
+        Бот відповідає на питання за вашою базою знань, обслуговує клієнтів
+        цілодобово та знижує навантаження на команду.
+      </p>
+      <div class="service-tags">
+        <span class="tag">OpenAI</span>
+        <span class="tag">RAG</span>
+        <span class="tag">Embeddings</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════ СТЕК ════════════════════ -->
+<div class="stack-section" id="stack">
+  <div class="inner">
+    <div class="section-tag reveal">tech_stack</div>
+    <h2 class="reveal">Наш стек</h2>
+    <p class="section-desc reveal">
+      Використовуємо лише перевірені інструменти, які добре зарекомендували
+      себе у реальних проєктах — від прототипу до продакшену.
+    </p>
+
+    <div class="stack-grid">
+      <div class="stack-item reveal"><span class="stack-item-icon">🐍</span><div class="stack-item-name">Python</div></div>
+      <div class="stack-item reveal"><span class="stack-item-icon">🤖</span><div class="stack-item-name">aiogram</div></div>
+      <div class="stack-item reveal"><span class="stack-item-icon">🗄️</span><div class="stack-item-name">PostgreSQL</div></div>
+      <div class="stack-item reveal"><span class="stack-item-icon">🔷</span><div class="stack-item-name">MySQL</div></div>
+      <div class="stack-item reveal"><span class="stack-item-icon">🔵</span><div class="stack-item-name">SQLAlchemy</div></div>
+      <div class="stack-item reveal"><span class="stack-item-icon">⚡</span><div class="stack-item-name">asyncio</div></div>
+      <div class="stack-item reveal"><span class="stack-item-icon">🐳</span><div class="stack-item-name">Docker</div></div>
+      <div class="stack-item reveal"><span class="stack-item-icon">🚂</span><div class="stack-item-name">Railway</div></div>
+      <div class="stack-item reveal"><span class="stack-item-icon">🔧</span><div class="stack-item-name">Git</div></div>
+      <div class="stack-item reveal"><span class="stack-item-icon">🌐</span><div class="stack-item-name">FastAPI</div></div>
+      <div class="stack-item reveal"><span class="stack-item-icon">🧠</span><div class="stack-item-name">OpenAI</div></div>
+      <div class="stack-item reveal"><span class="stack-item-icon">📦</span><div class="stack-item-name">NoSQL</div></div>
+    </div>
+
+    <!-- Термінал -->
+    <div class="terminal-wrap reveal">
+      <div class="terminal-bar">
+        <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+        <span class="terminal-title">yustack@prod — bot_deploy.sh</span>
+      </div>
+      <div class="terminal-body">
+        <div class="t-line">
+          <span class="t-prompt">yustack@server:~$</span>
+          <span class="t-cmd">git clone your_project && cd your_project</span>
+        </div>
+        <div class="t-output t-green">✓ Репозиторій успішно склоновано</div>
+        <div class="t-blank"></div>
+        <div class="t-line">
+          <span class="t-prompt">yustack@server:~$</span>
+          <span class="t-cmd">docker compose up -d</span>
+        </div>
+        <div class="t-output">Збірка образу... <span class="t-green">готово</span></div>
+        <div class="t-output">Запуск postgres... <span class="t-green">healthy</span></div>
+        <div class="t-output">Запуск бота... <span class="t-green">online</span></div>
+        <div class="t-blank"></div>
+        <div class="t-line">
+          <span class="t-prompt">yustack@server:~$</span>
+          <span class="t-cmd">./check_status.sh</span>
+        </div>
+        <div class="t-output">
+          <span class="t-cyan">Bot:</span> <span class="t-green">RUNNING</span>
+          &nbsp;|&nbsp;
+          <span class="t-cyan">DB:</span> <span class="t-green">CONNECTED</span>
+          &nbsp;|&nbsp;
+          <span class="t-cyan">Uptime:</span> <span class="t-orange">99.9%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ ПРОЦЕС ════════════════════ -->
+<section id="how">
+  <div class="section-tag reveal">process</div>
+  <h2 class="reveal">Як ми працюємо</h2>
+  <p class="section-desc reveal">
+    Простий і прозорий процес — від першого повідомлення у Telegram
+    до готового продукту на сервері. Ніяких прихованих етапів.
+  </p>
+
+  <div class="how-steps">
+    <div class="step reveal">
+      <div class="step-num">01</div>
+      <h3>Бриф</h3>
+      <p>
+        Розповідаєш, що потрібно. Обговорюємо функціонал, терміни
+        та бюджет. Без зайвих питань — тільки суть.
+      </p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">02</div>
+      <h3>Архітектура</h3>
+      <p>
+        Проєктуємо схему бази даних, FSM-діаграму та структуру API.
+        Погоджуємо план з тобою ще до початку написання коду.
+      </p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">03</div>
+      <h3>Розробка</h3>
+      <p>
+        Пишемо код ітераційно: показуємо проміжний результат,
+        отримуємо фідбек, рухаємося далі. Ти завжди знаєш, на якому
+        етапі знаходиться проєкт.
+      </p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">04</div>
+      <h3>Деплой</h3>
+      <p>
+        Тестуємо, розгортаємо на сервері та передаємо тобі доступи.
+        Бот працює, база підключена — готово до реальних користувачів.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ КОНТАКТ ════════════════════ -->
+<div class="contact-section" id="contact">
+  <div class="contact-inner reveal">
+    <div class="section-tag" style="margin-bottom:20px;">// contact</div>
+    <h2>Маєш ідею?<br><span style="color:var(--green)">Поговорімо.</span></h2>
+    <p>
+      Напиши нам у Telegram або на пошту — і вже сьогодні обговоримо
+      твій проєкт. Без зайвих формальностей та довгих комерційних пропозицій.
+    </p>
+    <div class="contact-links">
+      <a href="https://t.me/yustack" class="contact-link" target="_blank" rel="noopener">
+        <span class="licon">✈️</span> Telegram
+      </a>
+      <a href="mailto:hello@yustack.dev" class="contact-link">
+        <span class="licon">📧</span> Email
+      </a>
+      <a href="https://github.com/yustack" class="contact-link" target="_blank" rel="noopener">
+        <span class="licon">🐙</span> GitHub
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ FOOTER ════════════════════ -->
+<footer>
+  <div class="footer-logo">YuStack</div>
+  <div>© 2025 YuStack. Sudova Vyshnya, Ukraine. Побудовано на ☕ та Python.</div>
+  <div style="color:var(--green);font-family:var(--font-display)">
+    sys.status: <span style="color:#39ff7e">ONLINE</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
