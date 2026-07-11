@@ -3,7 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="YuStack — розробка Telegram-ботів з базами даних, FSM-логікою та автоматизацією. Від ідеї до деплою.">
+  
+  <!-- SEO & SMM Open Graph metadata (Додано для SMM просування) -->
+  <meta name="description" content="YuStack — розробка Telegram-ботів з базами даних, FSM-логікою та автоматизацією бізнес-процесів. Від ідеї до деплою.">
+  <meta property="og:title" content="YuStack — Telegram-боти та сучасна веб-розробка">
+  <meta property="og:description" content="Створюємо складних ботів з інтеграцією БД/FSM та конверсійні сайти для автоматизації вашого бізнесу.">
+  <meta property="og:image" content="assets/og-preview.png">
+  <meta property="og:type" content="website">
+
   <title>YuStack — Telegram-боти та веб-розробка</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="css/style.css">
@@ -17,6 +24,7 @@
     <li><a href="#services">Послуги</a></li>
     <li><a href="#stack">Стек</a></li>
     <li><a href="#how">Процес</a></li>
+    <li><a href="#reviews">Відгуки</a></li>
     <li><a href="#contact">Контакт</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Замовити проєкт</a>
@@ -34,8 +42,7 @@
     </h1>
     <p class="hero-sub">
       Розробляємо <strong>Telegram-ботів</strong> з базами даних, FSM-логікою
-      та повноцінною автоматизацією бізнес-процесів. Від технічного завдання
-      до робочого деплою — беремо на себе весь цикл.
+      та автоматизацією бізнес-процесів. Звільніть своїх менеджерів від рутини та почніть приймати замовлення в автоматичному режимі.
     </p>
     <div class="hero-actions">
       <a href="#services" class="btn-primary">Що ми робимо</a>
@@ -69,9 +76,7 @@
   <div class="section-tag reveal">services</div>
   <h2 class="reveal">Що ми робимо</h2>
   <p class="section-desc reveal">
-    Від простого бота для запису клієнтів до повноцінного веб-застосунку
-    з адмін-панеллю та аналітикою. Пишемо чистий код, деплоємо швидко,
-    підтримуємо після здачі.
+    Перетворюємо складні технічні інструменти на готові рішення для зростання продажів та автоматизації рутини. Жодної зайвої термінології — лише користь бізнесу.
   </p>
 
   <div class="services-grid">
@@ -81,9 +86,7 @@
       <span class="service-icon">🤖</span>
       <h3>Telegram-боти</h3>
       <p>
-        Розробляємо ботів будь-якої складності — від системи онлайн-запису
-        клієнтів до повноцінних CRM та платіжних шлюзів прямо у чаті.
-        Побудовані на aiogram із чіткою FSM-логікою та зручними inline-клавіатурами.
+        Створюємо розумних ботів для автопродажів, запису клієнтів та підтримки. Завдяки послідовним сценаріям (FSM-логіці) та зручному інтерфейсу, бот безпомилково супроводжує покупця від вибору до оплати.
       </p>
       <div class="service-tags">
         <span class="tag">aiogram</span>
@@ -98,9 +101,7 @@
       <span class="service-icon">🗄️</span>
       <h3>Бази даних</h3>
       <p>
-        Проєктуємо схему під конкретну задачу: PostgreSQL, MySQL або SQLite
-        залежно від масштабу проєкту. Пишемо міграції, налаштовуємо ORM
-        через SQLAlchemy та оптимізуємо запити під навантаження.
+        Налаштовуємо надійне зберігання інформації. Ваші замовлення, профілі клієнтів та історія транзакцій автоматично записуються в базу, аналізуються та інтегруються у зручні CRM чи Google-таблиці.
       </p>
       <div class="service-tags">
         <span class="tag">PostgreSQL</span>
@@ -114,9 +115,7 @@
       <span class="service-icon">🌐</span>
       <h3>Веб-сайти</h3>
       <p>
-        Створюємо лендінги, корпоративні сайти та портфоліо з сучасним
-        дизайном та адаптивною версткою. Усі сайти оптимізовані для SEO
-        та коректно відображаються на будь-якому пристрої.
+        Створюємо швидкі лендінги та корпоративні сайти, адаптовані під мобільні пристрої. Дизайн привертає увагу, а структура розроблена так, щоб перетворювати звичайних відвідувачів на покупців.
       </p>
       <div class="service-tags">
         <span class="tag">HTML/CSS</span>
@@ -130,9 +129,7 @@
       <span class="service-icon">⚙️</span>
       <h3>Автоматизація</h3>
       <p>
-        Пишемо скрипти, парсери та інтеграції зі сторонніми API.
-        Використовуємо asyncio для максимальної швидкодії.
-        Автоматизуємо все, що займає ваш час і може виконуватись без участі людини.
+        Об'єднуємо ваші поточні інструменти в єдину мережу. Робимо інтеграції з API, парсинг даних та синхронізацію бота з сайтом, щоб ви економили час на рутинних завданнях менеджменту.
       </p>
       <div class="service-tags">
         <span class="tag">asyncio</span>
@@ -146,9 +143,7 @@
       <span class="service-icon">🚀</span>
       <h3>Деплой та DevOps</h3>
       <p>
-        Пакуємо застосунки у Docker-контейнери та розгортаємо на Railway
-        або власному VPS. Налаштовуємо CI/CD-пайплайни так, щоб оновлення
-        відбувались автоматично — без вашої участі та без простоїв.
+        Розгортаємо готові продукти на швидких серверах. Контролюємо безперебійну роботу 24/7 та налаштовуємо автооновлення коду без простоїв у роботі вашого бізнесу.
       </p>
       <div class="service-tags">
         <span class="tag">Docker</span>
@@ -162,9 +157,7 @@
       <span class="service-icon">🧠</span>
       <h3>AI-інтеграції</h3>
       <p>
-        Вбудовуємо ChatGPT або RAG-систему безпосередньо у вашого бота.
-        Бот відповідає на питання за вашою базою знань, обслуговує клієнтів
-        цілодобово та знижує навантаження на команду.
+        Підключаємо штучний інтелект безпосередньо у вашого бота. Розумний асистент навчиться відповідати на часті питання клієнтів за вашою базою знань у будь-який час доби.
       </p>
       <div class="service-tags">
         <span class="tag">OpenAI</span>
@@ -182,8 +175,7 @@
     <div class="section-tag reveal">tech_stack</div>
     <h2 class="reveal">Наш стек</h2>
     <p class="section-desc reveal">
-      Використовуємо лише перевірені інструменти, які добре зарекомендували
-      себе у реальних проєктах — від прототипу до продакшену.
+      Використовуємо лише стабільні та швидкі технології, що дозволяє продуктам витримувати тисячі одночасних запитів без збоїв.
     </p>
 
     <div class="stack-grid">
@@ -243,8 +235,7 @@
   <div class="section-tag reveal">process</div>
   <h2 class="reveal">Як ми працюємо</h2>
   <p class="section-desc reveal">
-    Простий і прозорий процес — від першого повідомлення у Telegram
-    до готового продукту на сервері. Ніяких прихованих етапів.
+    Простий і прозорий процес розробки. Ви бачите кожне проміжне оновлення та повністю контролюєте рух проєкту.
   </p>
 
   <div class="how-steps">
@@ -252,52 +243,146 @@
       <div class="step-num">01</div>
       <h3>Бриф</h3>
       <p>
-        Розповідаєш, що потрібно. Обговорюємо функціонал, терміни
-        та бюджет. Без зайвих питань — тільки суть.
+        Розповідаєте про завдання вашого бізнесу. Разом обговорюємо функціонал, фіксуємо терміни та кінцевий бюджет.
       </p>
     </div>
     <div class="step reveal">
       <div class="step-num">02</div>
       <h3>Архітектура</h3>
       <p>
-        Проєктуємо схему бази даних, FSM-діаграму та структуру API.
-        Погоджуємо план з тобою ще до початку написання коду.
+        Проєктуємо структуру бази даних та схему логіки. Ви погоджуєте план розробки до написання першого рядка коду.
       </p>
     </div>
     <div class="step reveal">
       <div class="step-num">03</div>
       <h3>Розробка</h3>
       <p>
-        Пишемо код ітераційно: показуємо проміжний результат,
-        отримуємо фідбек, рухаємося далі. Ти завжди знаєш, на якому
-        етапі знаходиться проєкт.
+        Пишемо та тестуємо код ітераціями. Регулярно надсилаємо проміжні звіти та прототипи для швидкого фідбеку.
       </p>
     </div>
     <div class="step reveal">
       <div class="step-num">04</div>
       <h3>Деплой</h3>
       <p>
-        Тестуємо, розгортаємо на сервері та передаємо тобі доступи.
-        Бот працює, база підключена — готово до реальних користувачів.
+        Проводимо фінальні тести, розгортаємо продукт на сервері, передаємо доступи та надаємо гарантійну підтримку.
       </p>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════ КОНТАКТ ════════════════════ -->
+<!-- ════════════════════ ВІДГУКИ КЛІЄНТІВ ════════════════════ -->
+<section id="reviews" class="reviews-section reveal">
+  <div class="section-tag">// social_proof</div>
+  <h2>Що кажуть клієнти</h2>
+  <p class="section-desc">
+    Реальні відгуки підприємців, які довірили нам автоматизацію своїх процесів та запуск веб-продуктів.
+  </p>
+
+  <div class="reviews-grid">
+    <!-- ВІДГУК №1 -->
+    <div class="review-card">
+      <p class="review-text">
+        "ВСТАВТЕ ТЕКСТ ВІДГУКУ КЛІЄНТА №1 СЮДИ"
+      </p>
+      <div class="review-author">
+        <div class="author-avatar">ІНІЦІАЛИ_1</div>
+        <div class="author-info">
+          <h4>ІМ'Я_ТА_ПРІЗВИЩЕ_КЛІЄНТА_1</h4>
+          <p>ПОСАДА_АБО_КОМПАНІЯ_КЛІЄНТА_1</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ВІДГУК №2 -->
+    <div class="review-card">
+      <p class="review-text">
+        "ВСТАВТЕ ТЕКСТ ВІДГУКУ КЛІЄНТА №2 СЮДИ"
+      </p>
+      <div class="review-author">
+        <div class="author-avatar">ІНІЦІАЛИ_2</div>
+        <div class="author-info">
+          <h4>ІМ'Я_ТА_ПРІЗВИЩЕ_КЛІЄНТА_2</h4>
+          <p>ПОСАДА_АБО_КОМПАНІЯ_КЛІЄНТА_2</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ КОНТАКТ ТА КВІЗ ════════════════════ -->
 <div class="contact-section" id="contact">
   <div class="contact-inner reveal">
-    <div class="section-tag" style="margin-bottom:20px;">// contact</div>
-    <h2>Маєш ідею?<br><span style="color:var(--green)">Поговорімо.</span></h2>
+    <div class="section-tag" style="margin-bottom:20px;">// contact_center</div>
+    <h2>Маєте ідею?<br><span style="color:var(--green)">Розрахуйте вартість проєкту.</span></h2>
     <p>
-      Напиши нам у Telegram або на пошту — і вже сьогодні обговоримо
-      твій проєкт. Без зайвих формальностей та довгих комерційних пропозицій.
+      Пройдіть швидкий квіз за 30 секунд, щоб ми могли підготувати індивідуальну пропозицію для вашої задачі.
     </p>
+
+    <!-- Форма кібер-квізу -->
+    <div class="quiz-container">
+      <div class="quiz-progress-bar">
+        <div class="quiz-progress-fill"></div>
+      </div>
+      <form id="quiz-form">
+        
+        <!-- Крок 1: Вибір послуги -->
+        <div class="quiz-step active">
+          <h3>Крок 1: Що саме необхідно розробити?</h3>
+          <div class="quiz-options">
+            <label class="quiz-option-label">
+              <input type="radio" name="service" value="Telegram-бот" checked>
+              <span>Telegram-бот</span>
+            </label>
+            <label class="quiz-option-label">
+              <input type="radio" name="service" value="Веб-сайт / Лендінг">
+              <span>Веб-сайт / Лендінг</span>
+            </label>
+            <label class="quiz-option-label">
+              <input type="radio" name="service" value="Комплексне рішення (Бот + Сайт)">
+              <span>Бот + Сайт</span>
+            </label>
+          </div>
+          <div class="quiz-btn-row" style="justify-content: flex-end;">
+            <button type="button" class="quiz-btn quiz-next">Далі &gt;</button>
+          </div>
+        </div>
+
+        <!-- Крок 2: Введення даних -->
+        <div class="quiz-step">
+          <h3>Крок 2: Контакти та короткий опис</h3>
+          <div class="quiz-input-group">
+            <label for="client-contact">Telegram @username або Номер телефону (Обов'язково)</label>
+            <input type="text" id="client-contact" class="quiz-text-input" placeholder="@your_username">
+          </div>
+          <div class="quiz-input-group">
+            <label for="client-message">Розкажіть у 2-х словах про вашу ідею (Опціонально)</label>
+            <textarea id="client-message" rows="3" class="quiz-textarea" placeholder="Наприклад: бот для продажу курсів з оплатою..."></textarea>
+          </div>
+          <div class="quiz-btn-row">
+            <button type="button" class="quiz-btn quiz-prev">&lt; Назад</button>
+            <button type="submit" class="quiz-btn quiz-submit">Надіслати заявку</button>
+          </div>
+        </div>
+
+        <!-- Крок 3: Екран успіху -->
+        <div class="quiz-step" style="text-align: center; padding: 20px 0;">
+          <div class="quiz-success-icon">✓</div>
+          <h3>Дякуємо, заявку прийнято!</h3>
+          <p style="color: var(--text-dim); font-size: 13px; margin-bottom: 0;">
+            Ми зв'яжемося з вами у Telegram протягом 30 хвилин для безкоштовної консультації та розрахунку вартості.
+          </p>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- Традиційні лінки на прямий зв'язок -->
+    <p style="margin-bottom: 24px; color: var(--text-dim);">Або зв'яжіться з нами напряму без заповнення квізу:</p>
     <div class="contact-links">
       <a href="https://t.me/YuraWoin" class="contact-link" target="_blank" rel="noopener">
         <span class="licon">✈️</span> Telegram
       </a>
-      <a href="gmailto:uravoinskij@gmail.com" class="contact-link">
+      <a href="mailto:uravoinskij@gmail.com" class="contact-link">
         <span class="licon">📧</span> Email
       </a>
       <a href="https://github.com/YuraWoin" class="contact-link" target="_blank" rel="noopener">
@@ -306,6 +391,11 @@
     </div>
   </div>
 </div>
+
+<!-- FLOATING TELEGRAM BUTTON -->
+<a href="https://t.me/YuraWoin" class="floating-tg" target="_blank" rel="noopener" aria-label="Зв'язатися в Telegram">
+  ✈️
+</a>
 
 <!-- ════════════════════ FOOTER ════════════════════ -->
 <footer>
