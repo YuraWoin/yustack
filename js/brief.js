@@ -22,7 +22,7 @@
       return;
     }
 
-    var msg = 'Привіт, Юра! Хочу бота для бізнесу.' +
+    var msg = 'Привіт, YuStack! Хочу бота (або сайт) для бізнесу.' +
       '\n\nІм\u2019я / назва: ' + name.value.trim() +
       '\nНіша: ' + niche.value.trim() +
       '\n\nЩо зараз робимо руками:\n' + pain.value.trim();

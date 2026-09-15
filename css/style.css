@@ -210,6 +210,14 @@ h2 {
   line-height: 1.2;
 }
 .section-desc { color: var(--muted); margin-top: 12px; max-width: 620px; font-size: 15.5px; }
+.tech-strip {
+  margin-top: 26px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--muted);
+  text-align: center;
+  opacity: .85;
+}
 
 /* pain */
 .pain-grid {
@@ -394,6 +402,12 @@ footer { padding: 40px 24px 60px !important; }
   flex-wrap: wrap;
   color: var(--muted);
   font-size: 13px;
+}
+.footer-note {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 12.5px;
+  opacity: .8;
 }
 .status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 10px var(--green); margin-right: 6px; vertical-align: middle; animation: pulse 2s infinite; }
 @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:.4;} }
