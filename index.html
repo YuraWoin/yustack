@@ -1,11 +1,17 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="uk">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YuStack — Telegram-боти для бізнес-автоматизації</title>
-<meta name="description" content="YuStack — розробка Telegram-ботів для бізнесу: продажів, запису клієнтів, консультацій та автоматизації процесів.">
+<title>YuStack — Telegram-боти, які ведуть клієнта до запису і оплати</title>
+<meta name="description" content="Telegram-бот для бізнесу: запис, замовлення, каталог, відповіді на типові питання. Працює 24/7. Прототип за 48 годин. Від 5 000 ₴.">
+<meta property="og:title" content="YuStack — Telegram-боти, які ведуть клієнта до запису і оплати">
+<meta property="og:description" content="Записи, замовлення й відповіді на типові питання — у Telegram, поки ви спите. Прототип за 48 годин.">
+<meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,192 +19,240 @@
 <div class="grid-bg"></div>
 <div class="noise"></div>
 
+<!-- NAV -->
 <header>
   <nav>
-    <div class="logo-mark"><img src="images/favicon.svg" alt="YuStack" width="22" height="22" style="border-radius:3px;vertical-align:-5px">&nbsp;YuStack<span class="cursor"></span></div>
+    <a class="logo-mark" href="#top">
+      <img src="images/favicon.svg" width="24" height="24" alt="YuStack логотип">
+      YuStack
+    </a>
     <div class="nav-links">
-      <a href="#services">Послуги</a>
-      <a href="#examples">Приклади</a>
-      <a href="#stack">Стек</a>
-      <a href="#process">Процес</a>
+      <a href="#pain">Чому це потрібно</a>
+      <a href="#bots">Живі боти</a>
       <a href="#pricing">Ціни</a>
-      <a href="#reviews">Відгуки</a>
+      <a href="#contact">Контакти</a>
     </div>
-    <a class="nav-cta" href="https://t.me/YuraWoin" target="_blank" rel="noopener">Отримати консультацію</a>
+    <a class="nav-cta" href="https://t.me/YuraWoin" target="_blank" rel="noopener">Написати в Telegram</a>
   </nav>
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="top">
+  <canvas id="logo-canvas" aria-hidden="true"></canvas>
+
   <div class="hero-inner">
-    <div class="term-line mono"><span class="prompt">yustack@dev:~$</span> <span class="type-target" id="typeline">whoami</span></div>
-    <h1 class="headline">Telegram-боти, які <span class="accent">продають</span>, а не просто відповідають.</h1>
-    <p class="sub">Розробляємо ботів та автоматизацію для бізнесу: продажі, запис клієнтів, консультації, інтеграції з CRM. Швидко, стабільно, без ручного контролю.</p>
+    <p class="kicker mono">Юра · Telegram-боти для бізнесу · Судова Вишня</p>
+    <h1 class="headline">
+      Записи, замовлення й відповіді на типові питання — <span class="accent">у Telegram, поки ви спите</span>.
+    </h1>
+    <p class="sub">
+      Бот сам веде клієнта до запису чи оплати. Прототип — через 48 годин.
+      <span class="typer mono" id="typeline"></span>
+    </p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="https://t.me/YuraWoin" target="_blank" rel="noopener">Отримати консультацію →</a>
-      <a class="btn btn-ghost" href="#examples">Дивитись приклади</a>
+      <a class="btn btn-primary" href="#bots">Подивитись живих ботів ↓</a>
+      <a class="btn btn-ghost" href="https://t.me/YuraWoin" target="_blank" rel="noopener">Написати в Telegram</a>
     </div>
     <div class="stat-row">
-      <div class="stat"><div class="num">&lt;48h</div><div class="label">Перший прототип</div></div>
-      <div class="stat"><div class="num">24/7</div><div class="label">Боти в продакшені</div></div>
-      <!-- ЗАМІНИ/ДОДАЙ: коли будуть реальні цифри (к-сть ботів, роки в розробці) — сюди -->
+      <div class="stat"><div class="num">&lt;48 год</div><div class="label">прототип</div></div>
+      <div class="stat"><div class="num">24/7</div><div class="label">бот на зміні</div></div>
+      <div class="stat"><div class="num">+40%</div><div class="label">записів у салоні GV</div></div>
+      <div class="stat"><div class="num">від 5 000 ₴</div><div class="label">старт</div></div>
     </div>
   </div>
-  <div class="scroll-hint mono"><span>гортай вниз</span><span class="chevron">↓</span></div>
+
+  <div class="scroll-hint mono"><span>гортайте — далі швидко</span><span class="chevron">↓</span></div>
 </section>
 
-<!-- 3D LOGO SCROLL STAGE -->
-<div class="logo-stage" id="logoStage">
-  <div class="logo-stage-inner">
-    <canvas id="logo-canvas"></canvas>
-    <div class="logo-caption mono" id="logoCaption"><b>YuStack</b>компільовано. розгорнуто. онлайн.</div>
+<section id="pain" class="wrap">
+  <div class="reveal">
+    <div class="section-tag">впізнаєте свій день?</div>
+    <h2>Цей вечір не обовʼязково ваш</h2>
   </div>
-</div>
+  <div class="pain-grid">
+    <div class="pain reveal">
+      <div class="icon">🌙</div>
+      <h3>«Клієнт напише о 22:40»</h3>
+      <p>Типові питання і заявки на приходять і вночі. Якщо не відповісти — людина йде до конкурента.</p>
+    </div>
+    <div class="pain reveal">
+      <div class="icon">📝</div>
+      <h3>«Запис у коментарях і дзвінках»</h3>
+      <p>Губиться в стрічці. Увечері не згадаєте, хто й коли мав прийти.</p>
+    </div>
+    <div class="pain reveal">
+      <div class="icon">📱</div>
+      <h3>«Прайс у сторіс»</h3>
+      <p>Клієнт листає стрічку, щоб знайти ціну, — і обирає того, у кого вона завжди під рукою.</p>
+    </div>
+  </div>
+  <p class="pain-cta center reveal"><b>Бот закриває це сам:</b> відповідає, записує, продає. Ви спите або робите бізнес.</p>
+</section>
 
-<!-- SERVICES -->
 <section id="services" class="wrap">
-  <div class="reveal"><div class="section-tag">services</div>
-  <h2>Що ми можемо запропонувати для вашого бізнесу</h2>
-  <p class="section-desc">Рішення, які автоматизують роботу, покращують взаємодію з клієнтом і роблять процеси передбачуваними.</p></div>
+  <div class="reveal">
+    <div class="section-tag">// що я роблю</div>
+    <h2>Що я збираю</h2>
+    <p class="section-desc">Одне завдання — один блок. Без «а ще можемо все підряд».</p>
+  </div>
   <div class="services-grid">
-    <div class="svc reveal"><div class="icon">🤖</div><h3>Боти для продажів і запису</h3><p>Ведемо клієнта від першого повідомлення до заявки, оплати або підтвердження.</p><div class="tags"><span>aiogram</span><span>FSM</span><span>payments</span></div></div>
-    <div class="svc reveal"><div class="icon">🗄️</div><h3>Бази даних</h3><p>Надійне зберігання замовлень, профілів клієнтів та історії транзакцій.</p><div class="tags"><span>PostgreSQL</span><span>SQLAlchemy</span><span>Alembic</span></div></div>
-    <div class="svc reveal"><div class="icon">🌐</div><h3>Веб-сайти</h3><p>Швидкі лендінги й сайти, що перетворюють відвідувачів на клієнтів.</p><div class="tags"><span>HTML/CSS</span><span>React</span><span>SEO</span></div></div>
-    <div class="svc reveal"><div class="icon">⚙️</div><h3>Автоматизація процесів</h3><p>Об'єднуємо ваші інструменти через API в одну систему без ручної рутини.</p><div class="tags"><span>asyncio</span><span>parsing</span><span>REST API</span></div></div>
-    <div class="svc reveal"><div class="icon">🚀</div><h3>Деплой та DevOps</h3><p>Стабільна робота 24/7 і оновлення коду без простоїв бізнесу.</p><div class="tags"><span>Docker</span><span>Railway</span><span>CI/CD</span></div></div>
-    <div class="svc reveal"><div class="icon">🧠</div><h3>AI-інтеграції</h3><p>Розумний асистент відповідає клієнтам за вашою базою знань 24/7.</p><div class="tags"><span>OpenAI</span><span>RAG</span><span>Embeddings</span></div></div>
+    <div class="svc reveal"><div class="icon">📅</div><h3>Запис і заявки</h3><p>Клієнт обирає послугу й час у Telegram. Ви бачите заявку тут же.</p><div class="tags"><span>меню · слоти · нагадування</span></div></div>
+    <div class="svc reveal"><div class="icon">🛒</div><h3>Продаж без менеджера</h3><p>Прайс, кошик, замовлення. Бот веде до «оформити», а не до «передзвоніть».</p><div class="tags"><span>каталог · кошик · оплата</span></div></div>
+    <div class="svc reveal"><div class="icon">🌐</div><h3>Візитка в Telegram</h3><p>Одна сторінка: хто ви, що робите, кнопка написати. Як наш Mini App — тільки під ваш бренд.</p><div class="tags"><span>ландінг · Mini App · SEO</span></div></div>
+    <div class="svc reveal"><div class="icon">🔗</div><h3>База замість Excel</h3><p>Записи падають у базу. Адмін бачить список, міняє ціну, не шукає скріни в чаті.</p><div class="tags"><span>PostgreSQL · Sheets · адмінка</span></div></div>
+    <div class="svc reveal"><div class="icon">🧠</div><h3>Типові питання 24/7</h3><p>«Чи є вікно?», «Скільки коштує?» — відповідає бот вашим текстом. Складне — вам.</p><div class="tags"><span>AI · ваша база знань</span></div></div>
+    <div class="svc reveal"><div class="icon">🚀</div><h3>Деплой і підтримка</h3><p>Працює стабільно, оновлення без простоїв. Після запуску ви не залишаєтесь самі.</p><div class="tags"><span>сервер · оновлення · супровід</span></div></div>
   </div>
 </section>
 
-<!-- EXAMPLES / PORTFOLIO -->
-<section id="examples" class="wrap">
-  <div class="reveal"><div class="section-tag">examples</div>
-  <h2>Спробуйте наших ботів прямо зараз</h2>
-  <p class="section-desc">Не просто опис — живі приклади. Натисніть і подивіться, як це працює зсередини.</p></div>
-  <div class="services-grid">
-
-    <div class="svc reveal">
-      <div class="icon">💳</div>
-      <h3>Бот-візитка (Mini App)</h3>
-      <p>Інтерактивна візитка прямо в Telegram: портфоліо, послуги, контакти — без переходу на сайт.</p>
-      <div class="tags"><span>Mini App</span><span>aiogram</span></div>
-      <!-- ТУТ ВСТАВ ПОСИЛАННЯ НА БОТА-ВІЗИТКУ (MINI APP) -->
-      <a class="btn btn-ghost" href="https://t.me/yustack_company_bot/open" target="_blank" rel="noopener" style="margin-top:14px;display:inline-block">Спробувати →</a>
-    </div>
-
-    <div class="svc reveal">
-      <div class="icon">📋</div>
-      <h3>Шаблонний бот</h3>
-      <p>Базовий каркас бота для швидкого старту: меню, FSM-сценарії, підключення до БД — готово за 48 год.</p>
-      <div class="tags"><span>FSM</span><span>PostgreSQL</span></div>
-      <!-- ТУТ ВСТАВ ПОСИЛАННЯ НА ШАБЛОННИЙ БОТ -->
-      <a class="btn btn-ghost" href="https://t.me/ShablonYuStackBot" target="_blank" rel="noopener" style="margin-top:14px;display:inline-block">Спробувати →</a>
-    </div>
-
-    <div class="svc reveal">
-      <div class="icon">💇</div>
-      <h3>Бот для салону краси</h3>
-      <p>Запис клієнтів, каталог послуг та нагадування — реальний кейс, який зараз працює в продакшені.</p>
-      <div class="tags"><span>Bookings</span><span>Catalog</span></div>
-      <!-- ТУТ ВСТАВ ПОСИЛАННЯ НА БОТ ДЛЯ САЛОНУ -->
-      <a class="btn btn-ghost" href="https://t.me/GVpriceBot" target="_blank" rel="noopener" style="margin-top:14px;display:inline-block">Спробувати →</a>
-    </div>
-
+<section id="bots" class="wrap">
+  <div class="reveal">
+    <div class="section-tag">// не слайди — живі боти</div>
+    <h2>Потикайте самі, тут і зараз</h2>
+    <p class="section-desc">Жодних скріншотів. Відкривайте у Telegram і дивіться, як це працює зсередини.</p>
+  </div>
+  <div class="bots-grid">
+    <article class="bot reveal">
+      <div class="ico">💇</div>
+      <h3>Салон краси — у продакшені</h3>
+      <p>Каталог догляду та запис. Реальний кейс: Galyna Voinska Beauty Salon.</p>
+      <a class="btn btn-ghost" href="https://t.me/GVpriceBot" target="_blank" rel="noopener">Відкрити бота →</a>
+    </article>
+    <article class="bot reveal">
+      <div class="ico">📋</div>
+      <h3>Шаблон під кілька ніш</h3>
+      <p>Прайс, запис у салон, СТО, їжа, магазин — в одному боті.</p>
+      <a class="btn btn-ghost" href="https://t.me/ShablonYuStackBot" target="_blank" rel="noopener">Відкрити шаблон →</a>
+    </article>
+    <article class="bot reveal">
+      <div class="ico">💳</div>
+      <h3>Наш Mini App</h3>
+      <p>Візитка прямо в Telegram: послуги, кейси, ціни, кнопка «написати».</p>
+      <a class="btn btn-ghost" href="https://t.me/yustack_company_bot/open" target="_blank" rel="noopener">Відкрити візитку →</a>
+    </article>
   </div>
 </section>
 
-<!-- STACK -->
-<section id="stack" class="wrap">
-  <div class="reveal"><div class="section-tag">tech_stack</div><h2>Наш стек</h2>
-  <p class="section-desc">Стабільні, перевірені технології — швидкість, надійність, масштабованість.</p></div>
-  <div class="stack-grid reveal">
-    <div class="stack-item"><span class="glyph">🐍</span>Python</div>
-    <div class="stack-item"><span class="glyph">🤖</span>aiogram</div>
-    <div class="stack-item"><span class="glyph">🗄️</span>PostgreSQL</div>
-    <div class="stack-item"><span class="glyph">🔵</span>SQLAlchemy</div>
-    <div class="stack-item"><span class="glyph">⚡</span>asyncio</div>
-    <div class="stack-item"><span class="glyph">🐳</span>Docker</div>
-    <div class="stack-item"><span class="glyph">🚂</span>Railway</div>
-    <div class="stack-item"><span class="glyph">🌐</span>FastAPI</div>
-    <div class="stack-item"><span class="glyph">🧠</span>OpenAI</div>
-    <div class="stack-item"><span class="glyph">🔧</span>Git</div>
-  </div>
-  <div class="terminal reveal">
-    <div class="terminal-bar"><span></span><span></span><span></span><span style="margin-left:8px;color:var(--text-dim);font-family:var(--mono);font-size:12px;background:none;width:auto;height:auto;border-radius:0">yustack@prod — bot_deploy.sh</span></div>
-    <div class="terminal-body">
-      <div class="l"><span class="p">yustack@server:~$</span> git clone your_project && cd your_project</div>
-      <div class="l ok">✓ Репозиторій успішно клоновано</div>
-      <div class="l"><span class="p">yustack@server:~$</span> docker compose up -d</div>
-      <div class="l ok">Запуск postgres... healthy · Запуск бота... online</div>
-      <div class="l"><span class="p">yustack@server:~$</span> ./check_status.sh</div>
-      <div class="l ok">Bot: RUNNING | DB: CONNECTED | Uptime: 99.9%</div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section id="process" class="wrap">
-  <div class="reveal"><div class="section-tag">process</div><h2>Як ми працюємо</h2>
-  <p class="section-desc">Прозоро: від брифу до запуску — чітко, швидко, з контролем на кожному етапі.</p></div>
-  <div class="process-grid">
-    <div class="step reveal"><div class="idx">01</div><h3>Бриф</h3><p>Ви розповідаєте, які процеси потрібно автоматизувати і який результат очікується.</p></div>
-    <div class="step reveal"><div class="idx">02</div><h3>Архітектура</h3><p>Проєктуємо структуру бази даних і логіку. План погоджується до старту коду.</p></div>
-    <div class="step reveal"><div class="idx">03</div><h3>Розробка</h3><p>Пишемо та тестуємо поетапно, надсилаємо проміжні прототипи для фідбеку.</p></div>
-    <div class="step reveal"><div class="idx">04</div><h3>Деплой</h3><p>Фінальні перевірки, розгортання на сервері, передача доступів, підтримка.</p></div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section id="pricing" class="wrap">
-  <div class="reveal"><div class="section-tag">pricing</div>
-  <h2>Скільки це коштує</h2>
-  <p class="section-desc">Ціна залежить від складності логіки, кількості інтеграцій і термінів. Орієнтир нижче — щоб не гадати.</p></div>
-  <div class="terminal reveal">
-    <div class="terminal-bar"><span></span><span></span><span></span><span style="margin-left:8px;color:var(--text-dim);font-family:var(--mono);font-size:12px;background:none;width:auto;height:auto;border-radius:0">yustack@prod — price_calc.sh</span></div>
-    <div class="terminal-body">
-      <div class="l"><span class="p">yustack@server:~$</span> ./price_calc.sh --project=bot</div>
-      <div class="l ok">Вартість проєкту: від 4000₴</div>
-      <div class="l"><span class="p">yustack@server:~$</span> ./price_calc.sh --note</div>
-      <div class="l ok">Точна ціна — після брифу, залежно від задач</div>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section id="reviews" class="wrap">
-  <div class="reveal"><div class="section-tag">social_proof</div><h2>Що кажуть клієнти</h2></div>
-  <div class="reviews-grid">
-    <div class="review reveal"><p>"Потрібно було автоматизувати процес запису в салон краси, та каталог для перегляду догляду за волоссям. Звернулись до компанії YuStack бо ціна=якість. Пояснили як працює телеграм бот та за що ми платимо гроші."</p><div class="who"><div class="av"><img src="images/gv.jpg"></div><div class="name">Galyna Voinska Beauty Salon</div></div></div>
-  </div>
-  <p class="section-desc" style="margin-top:28px;font-size:14px">🔒 Дані клієнтів зберігаються у захищеній базі (PostgreSQL), доступ до якої маю лише я — без передачі третім особам.</p>
-</section>
-
-<!-- CONTACT -->
 <section class="wrap">
+  <div class="reveal">
+    <div class="section-tag">// як все відбувається</div>
+    <h2>Чотири кроки — і бот працює</h2>
+  </div>
+  <div class="process-grid">
+    <div class="step reveal"><div class="idx">01</div><h3>Пишете 2 речення</h3><p>Ніша і що сьогодні робите руками. Без технічних деталей.</p></div>
+    <div class="step reveal"><div class="idx">02</div><h3>Прототип за 48 годин</h3><p>Живий бот, який ви відкриваєте як клієнт і пробуєте.</p></div>
+    <div class="step reveal"><div class="idx">03</div><h3>Правите тексти</h3><p>Залишаєте свої формулювання, кнопки, прайс.</p></div>
+    <div class="step reveal"><div class="idx">04</div><h3>Деплой і оплата</h3><p>Працює 24/7. Оплата — після того, як прототип запрацював і ви його побачили.</p></div>
+  </div>
+</section>
+
+<section id="pricing" class="wrap">
+  <div class="reveal">
+    <div class="section-tag">// ціни</div>
+    <h2>Скільки коштує — одразу</h2>
+    <p class="section-desc">Без «дізнайтесь у менеджера». Вилка відкрита; точну цифру називаю за 30 хвилин після брифу.</p>
+  </div>
+  <div class="packages">
+    <div class="package reveal">
+      <div class="p-name">Візитка</div>
+      <div class="p-price">від 5 000 ₴</div>
+      <div class="p-days">3–5 днів</div>
+      <ul>
+        <li>сторінка: хто ви і що робите</li>
+        <li>кнопка «написати» + контакти</li>
+        <li>деплой у Telegram</li>
+      </ul>
+    </div>
+    <div class="package hot reveal">
+      <div class="p-name">Запис / замовлення</div>
+      <div class="p-price">від 15 000 ₴</div>
+      <div class="p-days">7–10 днів</div>
+      <ul>
+        <li>Все з «Візитки»</li>
+        <li>запис на послуги / каталог</li>
+        <li>база замість Excel + нагадування</li>
+      </ul>
+    </div>
+    <div class="package reveal">
+      <div class="p-name">Mini App з оплатою</div>
+      <div class="p-price">від 25 000 ₴</div>
+      <div class="p-days">2–3 тижні</div>
+      <ul>
+        <li>Все з «Запису»</li>
+        <li>магазин / каталог у Telegram</li>
+        <li>оплата + аналітика</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="wrap">
+  <div class="reveal">
+    <div class="section-tag">// відгук і факти</div>
+    <h2>Що кажуть клієнти</h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review reveal">
+      <p>«Потрібно було автоматизувати процес запису в салон краси та каталог для перегляду догляду. Звернулись до YuStack, бо ціна = якість. Пояснили, як працює Telegram-бот і за що ми платимо.»</p>
+      <div class="who">
+        <span class="av"><img src="images/gv.jpg" alt=""></span>
+        <span class="name">Galyna Voinska Beauty Salon</span>
+      </div>
+    </div>
+    <div class="review reveal">
+      <p>Бот салону працює в продакшені, а не як макет. Перевірте самі — рекомендацій достатньо:</p>
+      <div class="numline">
+        <span><b>+40%</b> записів</span>
+        <span><b>3</b> боти онлайн</span>
+        <span><b>24/7</b> на зміні</span>
+        <span><b>99.9%</b> аптайм</span>
+      </div>
+      <a class="btn btn-ghost" href="https://t.me/GVpriceBot" target="_blank" rel="noopener">Відкрити бота салону →</a>
+    </div>
+  </div>
+  <p class="section-desc" style="margin-top:28px;font-size:14px">🔒 Дані клієнтів зберігаються у захищеній базі (PostgreSQL), доступ до якої маю лише я.</p>
+</section>
+
+<section id="contact" class="wrap">
   <div class="contact reveal">
-    <div class="section-tag" style="justify-content:center;display:flex">contact_center</div>
-    <h2>Маєте ідею? Обговорімо її.</h2>
-    <p>Опишіть задачу в Telegram — відповім протягом 30 хвилин і одразу оцінюю, як бот або сайт може підвищити ефективність вашого бізнесу.</p>
-    <a class="btn btn-primary" href="https://t.me/YuraWoin" target="_blank" rel="noopener" style="font-size:16px;padding:16px 34px">✈️ Отримати консультацію в Telegram</a>
+    <div class="section-tag">// контакти</div>
+    <h2>Опишіть задачу — відповім за 30 хвилин</h2>
+    <p>Три поля, без реєстрації. Після відправки — Telegram відкриється з уже написаним повідомленням.</p>
+
+    <form class="brief" id="brief">
+      <div class="brief-row">
+        <label>Імʼя / назва
+          <input id="b-name" placeholder="наприклад, салон Галина" autocomplete="name">
+        </label>
+        <label>Ніша
+          <input id="b-niche" placeholder="салон, магазин, кафе, СТО…">
+        </label>
+      </div>
+      <label>Що зараз робите руками
+        <textarea id="b-pain" rows="3" placeholder="записуємо в Direct, губимо заявки, прайс у сторіс…"></textarea>
+      </label>
+      <button class="btn btn-primary" type="submit">Отримати оцінку в Telegram</button>
+    </form>
+
     <div class="contact-links">
       <a href="https://t.me/YuraWoin" target="_blank" rel="noopener">✈️ Telegram</a>
+      <a href="https://www.instagram.com/yustack7" target="_blank" rel="noopener">📷 Instagram</a>
       <a href="mailto:uravoinskij@gmail.com">📧 Gmail</a>
       <a href="https://github.com/YuraWoin" target="_blank" rel="noopener">🐙 GitHub</a>
-      <!-- ТУТ ВСТАВ ПОСИЛАННЯ НА ІНСТАГРАМ -->
-      <a href="https://www.instagram.com/yustack7" target="_blank" rel="noopener">📷 Instagram</a>
     </div>
   </div>
 </section>
 
 <footer class="wrap">
   <div class="footer-row">
-    <div>© 2026 YuStack. Sudova Vyshnya, Ukraine.</div>
+    <div>© 2026 YuStack · Sudova Vyshnya, Ukraine</div>
     <div><span class="status-dot"></span>sys.status: ONLINE</div>
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha384-CI3ELBVUz9XQO+97x6nwMDPosPR5XvsxW2ua7N1Xeygeh1IxtgqtCkGfQY9WWdHu" crossorigin="anonymous"></script>
 <script src="js/typing.js"></script>
+<script src="js/brief.js"></script>
 <script src="js/scroll-reveal.js"></script>
 <script src="js/logo-3d.js"></script>
 </body>

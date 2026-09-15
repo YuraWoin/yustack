@@ -1,20 +1,33 @@
-/* ---- typing effect in hero terminal line ---- */
-(function(){
-  const words = ["whoami","cat about.txt","./deploy.sh --client=you"];
-  const el = document.getElementById('typeline');
-  let wi=0, ci=0, deleting=false;
-  function tick(){
-    const w = words[wi];
-    if(!deleting){
-      ci++;
-      el.textContent = w.slice(0,ci);
-      if(ci===w.length){ deleting=true; setTimeout(tick,1400); return; }
+(function () {
+  var target = document.getElementById('typeline');
+  if (!target) return;
+
+  var words = [
+    'Салон записує клієнтів без дзвінків.',
+    'Кафе приймає замовлення вночі.',
+    'Магазин відповідає «скільки коштує?» сам.',
+    'Експерт не губить заявку, поки спить.'
+  ];
+
+  var SPEED = 46;     // type
+  var PAUSE = 1800;   // hold full
+  var fadeCSS = 'css-fade';
+
+  var w = 0, i = 0, deleting = false;
+
+  function loop() {
+    var word = words[w];
+    if (!deleting) {
+      i++;
+      target.textContent = word.slice(0, i);
+      if (i >= word.length) { deleting = true; setTimeout(loop, PAUSE); return; }
+      setTimeout(loop, SPEED);
     } else {
-      ci--;
-      el.textContent = w.slice(0,ci);
-      if(ci===0){ deleting=false; wi=(wi+1)%words.length; }
+      i -= 2;
+      if (i <= 0) { deleting = false; i = 0; w = (w + 1) % words.length; }
+      target.textContent = word.slice(0, Math.max(0, i));
+      setTimeout(loop, SPEED);
     }
-    setTimeout(tick, deleting?40:80);
   }
-  tick();
+  loop();
 })();

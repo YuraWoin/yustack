@@ -1,31 +1,33 @@
 # YuStack — Landing Page
 
-Лендінг для компанії **YuStack**, що спеціалізується на розробці Telegram-ботів, веб-сайтів та автоматизації.
+Лендінг для **YuStack** — розробка Telegram-ботів, які ведуть клієнтів до запису й оплати.
 
 ## Структура проєкту
 
 ```
 yustack/
-├── index.html          # Головна сторінка
+├── index.html            # Головна сторінка (лендінг, 1 екран = офер для клієнта)
 ├── css/
-│   └── style.css       # Всі стилі (змінні, компоненти, анімації)
+│   └── style.css         # Всі стилі (змінні, компоненти, анімації, адаптив)
 ├── js/
-│   └── main.js         # Scroll reveal, typewriter, активні посилання
-├── assets/
-│   └── favicon.svg     # Іконка сайту
-└── README.md           # Цей файл
+│   ├── logo-3d.js        # 3D-лого на фоні hero (three.js r128, vanilla)
+│   ├── typing.js         # Друкований слоган-хук під заголовком
+│   ├── brief.js          # Форма-бриф → відкриває Telegram з готовим текстом
+│   └── scroll-reveal.js  # Поява блоків під час скролу (IntersectionObserver)
+├── images/
+│   ├── favicon.svg       # Іконка сайту
+│   └── gv.jpg            # Фото салону Galyna Voinska (відгук)
+└── README.md
 ```
 
 ## Технології
 
-- **HTML5** — семантична розмітка
-- **CSS3** — кастомні властивості, grid, flexbox, анімації
-- **Vanilla JS** — IntersectionObserver, без зовнішніх залежностей
-- **Шрифти** — JetBrains Mono + Space Mono (Google Fonts)
+- **HTML5 + CSS3** — семантична розмітка, кастомні властивості, grid, анімації
+- **Vanilla JS** — без фреймворків і без збірки
+- **three.js r128 (CDN)** — 3D-лого: глянцевий куб із PBR-відображенням, «Y»-гліф, партиклі, свічення
+- **Шрифти** — Inter + JetBrains Mono (Google Fonts)
 
 ## Запуск
-
-Відкрий `index.html` у браузері або запусти локальний сервер:
 
 ```bash
 # Python
@@ -37,15 +39,17 @@ npx serve .
 
 ## Кастомізація
 
-| Що змінити          | Де                                     |
-|---------------------|----------------------------------------|
-| Кольори / шрифти    | `css/style.css` → `:root { ... }`      |
-| Тексти / секції     | `index.html`                           |
-| Анімації / логіка   | `js/main.js`                           |
-| Контакти            | `index.html` → секція `#contact`       |
+| Що змінити        | Де                                     |
+|-------------------|----------------------------------------|
+| Кольори / шрифти  | `css/style.css` → `:root { ... }`      |
+| Тексти / секції   | `index.html`                           |
+| 3D-лого           | `js/logo-3d.js`                        |
+| Контакти          | `index.html` → секція `#contact`       |
 
 ## Контакти YuStack
 
-- Telegram: [@yustack](https://t.me/yustack)
-- Email: hello@yustack.dev
-- GitHub: [github.com/yustack](https://github.com/yustack)
+- Telegram: [@YuraWoin](https://t.me/YuraWoin)
+- Instagram: [yustack7](https://www.instagram.com/yustack7)
+- Email: [uravoinskij@gmail.com](mailto:uravoinskij@gmail.com)
+- GitHub: [github.com/YuraWoin/yustack](https://github.com/YuraWoin/yustack)
+- Сайт (Netlify): https://yustack.netlify.app/
